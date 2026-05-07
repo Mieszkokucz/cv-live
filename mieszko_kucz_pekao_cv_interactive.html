@@ -310,47 +310,40 @@ const DATA = {
       // ── OFERTA ──────────────────────────────
       offerRole:    "Inżynier / Inżynierka AI",
       offerCompany: "Bank Pekao",
-      offerText: `Szukamy specjalisty z wiedzą teoretyczną i praktyczną w systemach AI — w tym architektury agentowe, LLM i RAG. Wymagana zaawansowana znajomość Pythona, doświadczenie z platformami chmurowymi (GCP/Azure) oraz umiejętność tworzenia i wdrażania systemów produkcyjnych opartych na AI. Obowiązki: projektowanie rozwiązań analitycznych opartych na AI, optymalizacja systemów agentowych, tworzenie warstwy aplikacyjnej i API, monitorowanie jakości systemów AI.`,
+      offerText: `Szukamy osoby z wiedzą i praktyką w systemach AI: architektury agentowe, LLM i RAG. Wymagany Python na poziomie zaawansowanym oraz doświadczenie z platformami chmurowymi (GCP/Azure). Rola obejmuje projektowanie i wdrażanie rozwiązań AI na produkcji, tworzenie warstwy API oraz optymalizację systemów agentowych.`,
 
       // ── THINKING (symulowany — pisz j.modelu) ──
-      thinkingText: `Oferta wymaga LLM, RAG i architektur agentowych w środowisku produkcyjnym banku — to dość konkretne wymagania. Sprawdzam kandydata.
-Python zaawansowany — 3 lata komercyjne, codzienne użycie. Jest.
-Deploy systemów AI na produkcję — optymalizator kosztów logistycznych na Azure Functions, tysiące produktów. Jest.
-RAG — zbudował DocQuery end-to-end z ekstrakcją PDF przez Claude Vision, ChromaDB i mierzalnym zestawem ewaluacyjnym (14 pytań ground truth). Jest i to konkretnie.
-LLM API, FastAPI, Docker, CI/CD — Mirror pokazuje że rozumie pełny stack backendowy, nie tylko modele.
-Potencjalny gap: architektury agentowe w produkcji — zna koncepcję, ale nie wdrażał w środowisku komercyjnym. GCP konkretnie — ma Azure, nie GCP.
-Środowisko bankowe wymaga niezawodności i mierzalnej jakości — to akurat gra na korzyść. Kandydat ma testy integracyjne, ewaluację retrievalu, myśli o jakości systemowo.
-Ogólnie: bardzo dobre dopasowanie. Profil konkretny, fundamenty solidne.`,
+      thinkingText: `Oferta stawia na LLM, RAG i architektury agentowe — to rdzeń wymagań. Kandydat ma DocQuery: działający system RAG end-to-end z Claude Vision, ChromaDB, ewaluacją 14-pytaniową i testami integracyjnymi. To konkretny kod, nie znajomość koncepcji. Mirror — własna aplikacja LLM z FastAPI, PostgreSQL, Docker, CI/CD. Python: 3 lata komercyjne. Hmm, oferta wymaga GCP — kandydat ma Azure Functions w produkcji. Cross-cloud, nie idealne... ale myślenie chmurowe i deploy na produkcji jest. Systemy AI na produkcji: uprodukcyjnienie optymalizatora kosztów logistycznych i pipeline'ów LightGBM/LSTM. Sektor finansowy — brak bezpośredniego doświadczenia, ale to "mile widziane", nie wymagane. Ogólnie bardzo mocne dopasowanie w trzech kluczowych obszarach: LLM, RAG, produkcja.`,
 
       // ── NARRACJA ────────────────────────────
-      narrative: `Mieszko ma <strong>3 lata komercyjnego doświadczenia</strong> w uprodukcyjnianiu systemów ML — od notebooków po Azure Functions obsługujące tysiące produktów. LLM i RAG to nie deklaracje: zbudował aplikację Mirror (<em>FastAPI, PostgreSQL, Docker, CI/CD</em>) i system RAG DocQuery z <strong>mierzalną ewaluacją retrievalu</strong> — 14-pytaniowy ground truth, testy integracyjne, odmowa halucynacji gdy danych nie ma. Bank Pekao wymaga tworzenia warstwy aplikacyjnej i API dla AI — to dokładnie jego profil: backend, systemy produkcyjne, jakość mierzona testami. Interesuje go praca gdzie niezawodność AI ma realne konsekwencje, nie POC do szuflady.`,
+      narrative: `Mieszko ma <strong>działający system RAG</strong> (DocQuery) i <strong>własną aplikację LLM</strong> (Mirror) na koncie — to nie deklaracja, to kod z testami integracyjnymi, CI/CD i mierzalną ewaluacją retrievalu. Trzy lata komercyjnego uprodukcyjniania modeli ML na <strong>Azure</strong> — deploy był jego robotą, nie cudzą. Pekao szuka kogoś kto wdroży AI na produkcji: Mieszko robił to przy optymalizatorze kosztów logistycznych i pipeline'ach prognostycznych od notebooka po Azure Functions.`,
 
       // ── 4 MATCH POINTY ──────────────────────
       matches: [
         {
-          req:   "LLM, RAG i architektury agentowe",
-          title: "DocQuery + Mirror — działające systemy",
-          proof: "Zbudowałem system RAG end-to-end: ekstrakcja PDF przez <em>Claude Vision API</em>, chunking z typami treści, embeddingi OpenAI, ChromaDB, testy integracyjne z <em>14-pytaniowym ground truth</em>. Aplikacja Mirror: własny LLM backend z FastAPI, model-agnostic, architektura pod multi-user od dnia zero."
+          req:   "LLM, RAG, architektury agentowe",
+          title: "DocQuery — RAG end-to-end z ewaluacją",
+          proof: "Zbudowałem system RAG od zera: <em>Claude Vision API</em> do ekstrakcji PDF, embeddingi OpenAI, ChromaDB, chunking z typami treści. Zestaw ewaluacyjny 14 pytań + testy integracyjne — mierzalna jakość retrievalu, nie subiektywne „chyba działa"."
         },
         {
-          req:   "Tworzenie i wdrażanie systemów produkcyjnych AI",
-          title: "Od POC do Azure Functions",
-          proof: "Uprodukcyjniłem optymalizator kosztów logistycznych — od POC działającego na kilku produktach do <em>Azure Functions</em> obsługujących tysiące. Testowałem algorytmy, rozbudowałem schemat bazy, napisałem testy przypadków skrajnych. Deploy był moją robotą, nie cudzą."
+          req:   "Python na poziomie zaawansowanym",
+          title: "3 lata komercyjnego Pythona w ML",
+          proof: "Główny język przez cały okres w SmartStock — uprodukcyjnianie modeli <em>LightGBM</em> i <em>LSTM</em>, pipeline'y ingest–feature engineering–inference, własne API w FastAPI w projektach Mirror i DocQuery."
         },
         {
-          req:   "Python zaawansowany + warstwa API",
-          title: "3 lata komercyjne + FastAPI w projektach",
-          proof: "Python jako główny język przez 3 lata w produkcji (SmartStock). W projektach własnych: <em>FastAPI</em> z pełnym REST API, walidacją, migracjami Alembic, Swagger — całość od zera bez gotowego boilerplate."
+          req:   "Wdrażanie systemów AI na produkcji",
+          title: "Azure Functions — od POC do produkcji",
+          proof: "Uprodukcyjniłem optymalizator kosztów logistycznych: od POC działającego na kilku produktach do <em>Azure Functions</em> obsługujących tysiące. Testowanie algorytmów optymalizacyjnych, rozbudowa schematu bazy, testy przypadków skrajnych, deploy."
         },
         {
-          req:   "Monitorowanie i doskonalenie jakości systemów AI",
-          title: "Mierzalna ewaluacja, nie 'chyba działa'",
-          proof: "W DocQuery: zestaw ewaluacyjny z <em>14 pytaniami single-hop</em> i testy integracyjne retrievalu jako automatyczne kryterium jakości. System odmawia odpowiedzi gdy danych nie ma — eliminacja halucynacji jako element architektury, nie afterthought."
+          req:   "Tworzenie warstwy aplikacyjnej i API",
+          title: "FastAPI od zera — Mirror i DocQuery",
+          proof: "Dwa własne backendy REST w <em>FastAPI</em>: Mirror (LLM journaling, auth, historia sesji) i DocQuery (RAG pipeline + Streamlit UI). Docker Compose, <em>GitHub Actions CI/CD</em>, migracje Alembic — pełny stack, nie tylko endpoint."
         }
       ],
 
       // ── SCORE (85-97) ────────────────────────
-      score:   89,
+      score:   90,
       verdict: "Zdecydowanie rekomendowany",
 
       // ── BOTTOM CTA ──────────────────────────
@@ -359,45 +352,38 @@ Ogólnie: bardzo dobre dopasowanie. Profil konkretny, fundamenty solidne.`,
 
     // ─── ENGLISH ──────────────────────────────
     en: {
-      offerRole:    "Inżynier / Inżynierka AI",
+      offerRole:    "AI Engineer",
       offerCompany: "Bank Pekao",
-      offerText: `Looking for a specialist with theoretical and practical knowledge of AI systems — including agent architectures, LLMs and RAG. Required: advanced Python, experience with cloud platforms (GCP/Azure), ability to build and deploy production AI systems. Responsibilities: designing AI-based analytical solutions, optimizing agent systems, building application and API layers, monitoring AI system quality.`,
+      offerText: `We are looking for someone with theoretical and practical knowledge of AI systems: agentic architectures, LLM and RAG. Advanced Python required, along with experience in cloud platforms (GCP/Azure). The role involves designing and deploying production AI solutions, building API layers, and optimizing agentic systems.`,
 
-      thinkingText: `The role requires LLMs, RAG and agent architectures in a banking production environment — fairly specific requirements. Checking the candidate.
-Advanced Python — 3 years commercial, daily use. Check.
-Deploying AI systems to production — logistics cost optimizer on Azure Functions, thousands of products. Check.
-RAG — built DocQuery end-to-end: PDF extraction via Claude Vision, ChromaDB, measurable eval set (14 ground truth questions). Check, and concretely so.
-LLM API, FastAPI, Docker, CI/CD — Mirror shows he understands the full backend stack, not just models.
-Potential gap: agent architectures in production — knows the concept, hasn't deployed commercially. GCP specifically — has Azure, not GCP.
-Banking environment requires reliability and measurable quality — this actually works in his favor. Integration tests, retrieval evaluation, systematic quality thinking.
-Overall: strong match. Concrete profile, solid foundations.`,
+      thinkingText: `Offer centers on LLM, RAG, and agentic architectures. Candidate has DocQuery — an end-to-end RAG system with Claude Vision, ChromaDB, a 14-question eval set, and integration tests. That's real code, not just concept knowledge. Mirror — personal LLM app with FastAPI, PostgreSQL, Docker, CI/CD. Python: 3 years commercial. Hmm, offer requires GCP — candidate has Azure Functions in production. Cross-cloud, not ideal... but cloud-native thinking and production deploy are there. AI systems on production: productionized a logistics optimization engine and LightGBM/LSTM pipelines. Financial sector — no direct experience, but that's "nice to have," not required. Overall very strong fit on the three core areas: LLM, RAG, production.`,
 
-      narrative: `Mieszko has <strong>3 years of commercial experience</strong> productionizing ML systems — from notebooks to Azure Functions handling thousands of products. LLMs and RAG aren't just buzzwords: he built Mirror (<em>FastAPI, PostgreSQL, Docker, CI/CD</em>) and a RAG system DocQuery with <strong>measurable retrieval evaluation</strong> — 14-question ground truth, integration tests, hallucination refusal built into the architecture. Bank Pekao needs someone to build the application and API layer for AI — that's exactly his profile: backend engineering, production systems, quality measured by tests.`,
+      narrative: `Mieszko has a <strong>working RAG system</strong> (DocQuery) and a <strong>personal LLM application</strong> (Mirror) — not declarations, but code with integration tests, CI/CD, and measurable retrieval evaluation. Three years of commercial ML productionization on <strong>Azure</strong> — deployment was his job, not someone else's ticket. Pekao needs someone who can ship AI to production: Mieszko did exactly that with a logistics cost optimizer and forecasting pipelines, from notebooks to Azure Functions.`,
 
       matches: [
         {
-          req:   "LLMs, RAG and agent architectures",
-          title: "DocQuery + Mirror — working systems",
-          proof: "Built a RAG system end-to-end: PDF extraction via <em>Claude Vision API</em>, typed chunking, OpenAI embeddings, ChromaDB, integration tests with a <em>14-question ground truth eval set</em>. Mirror: personal LLM backend with FastAPI, model-agnostic design, multi-user architecture from day one."
+          req:   "LLM, RAG, agentic architectures",
+          title: "DocQuery — end-to-end RAG with eval",
+          proof: "Built a RAG system from scratch: <em>Claude Vision API</em> for PDF extraction, OpenAI embeddings, ChromaDB, typed chunking strategy. 14-question ground truth eval set + integration tests — measurable retrieval quality."
         },
         {
-          req:   "Building and deploying production AI systems",
-          title: "From POC to Azure Functions",
-          proof: "Productionized a logistics cost optimizer — from a research POC on a handful of products to <em>Azure Functions</em> handling thousands. Tested algorithms, extended the database schema, wrote edge-case tests. Deployment was my responsibility, not a ticket to DevOps."
+          req:   "Advanced Python",
+          title: "3 years commercial Python in ML",
+          proof: "Primary language throughout SmartStock — productionizing <em>LightGBM</em> and <em>LSTM</em> models, ingest–feature engineering–inference pipelines, FastAPI backends in Mirror and DocQuery."
         },
         {
-          req:   "Advanced Python + API layer",
-          title: "3 years commercial + FastAPI in own projects",
-          proof: "Python as primary language for 3 commercial years (SmartStock). Personal projects: <em>FastAPI</em> with full REST API, Alembic migrations, Swagger — built from scratch without boilerplate."
+          req:   "Deploying AI systems to production",
+          title: "Azure Functions — POC to production",
+          proof: "Productionized a logistics cost optimization engine: from a POC on a handful of products to <em>Azure Functions</em> handling thousands. Algorithm testing, schema extension, edge-case tests, production deploy."
         },
         {
-          req:   "Monitoring and improving AI system quality",
-          title: "Measurable evaluation, not 'seems to work'",
-          proof: "DocQuery: <em>14-question single-hop eval set</em> and integration retrieval tests as automated quality gates. System refuses to answer when data isn't in the document — hallucination prevention as architecture, not afterthought."
+          req:   "Building the application and API layer",
+          title: "FastAPI from scratch — Mirror & DocQuery",
+          proof: "Two full REST backends in <em>FastAPI</em>: Mirror (LLM journaling, auth, session history) and DocQuery (RAG pipeline + Streamlit UI). Docker Compose, <em>GitHub Actions CI/CD</em>, Alembic migrations — full stack, not just an endpoint."
         }
       ],
 
-      score:   89,
+      score:   90,
       verdict: "Strongly recommended",
       cta:     "Schedule an interview with this candidate",
     }
