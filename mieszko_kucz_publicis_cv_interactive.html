@@ -310,90 +310,64 @@ const DATA = {
       // ── OFERTA ──────────────────────────────
       offerRole:    "Data Engineer",
       offerCompany: "Publicis Groupe",
-      offerText: `Szukamy Data Engineera z min. 2-letnim doświadczeniem w data engineering lub analizie danych. Wymagane: praktyczna znajomość Pythona (obsługa API, przetwarzanie danych), doświadczenie z chmurą (GCP, Microsoft Fabric), umiejętność samodzielnego prowadzenia projektów end-to-end. Obowiązki: projektowanie i budowa procesów zbierania danych, implementacja konektorów do źródeł danych, ładowanie i przetwarzanie danych w chmurze, zarządzanie cyklem życia modeli ML. Mile widziane: doświadczenie w MLOps i wdrażaniu modeli ML, znajomość LLM i RAG. Stack: Python, GCP, BigQuery, SQL.`,
+      offerText: `Szukamy Data Engineera do projektowania i budowy procesów zbierania danych z różnych źródeł oraz ich przetwarzania w chmurze (GCP, Microsoft Fabric, BigQuery). Wymagamy praktycznej znajomości Pythona, SQL i min. 2 lat doświadczenia w data engineering lub analizie danych. Mile widziane: doświadczenie z MLOps, GenAI (LLM, RAG), Vertex AI i MLflow.`,
 
       // ── THINKING (symulowany — pisz j.modelu) ──
-      thinkingText: `Oferta data engineering z wyraźnym komponentem ML — pipeline'y, cloud, cykl życia modeli. Ciekawe połączenie, sprawdzam kandydata.
-Python + przetwarzanie danych — 3 lata komercyjne, jest. Pipeline'y ML end-to-end — uprodukcyjniał modele LightGBM i LSTM w SmartStock, od notebooka do systemu produkcyjnego, jest.
-Cloud — deploy na Azure Functions w produkcji, jest. GCP konkretnie — zna podstawy, nie wdrażał produkcyjnie. Potencjalny gap, ale stack chmurowy przełącza się szybko gdy fundamenty są.
-Integracja API i źródeł danych — Open Weather API w SmartStock, FastAPI w projektach własnych, jest.
-MLOps i cykl życia modeli — rozumie mechanizm, nie używał narzędzi (MLflow, Vertex AI) komercyjnie. Na liście "mile widziane", nie wymagane.
-Ogólnie: dobre dopasowanie na core wymaganiach, gap głównie na GCP i narzędziach MLOps.`,
+      thinkingText: `Oferta skupia się na data engineering — pipeline'y zbierania danych, transformacje w chmurze, praca z BigQuery i GCP. Python i SQL jako core wymagania... to jest dokładnie to co Mieszko ma po 3 latach w SmartStock. Hmm, sprawdzam chmurę — GCP i Microsoft Fabric nie pojawiają się w CV, doświadczenie chmurowe to Azure Functions. To jest luka warta odnotowania. Vertex AI i MLflow też nie są wymienione... ale ML w produkcji jest: LightGBM i LSTM z notebooków na produkcyjne pipeline'y. Na nice-to-have GenAI/RAG mamy DocQuery i Mirror — naprawdę solidne pokrycie. Ogólnie: core stack Python/SQL/pipeline mocny, luka na konkretne narzędzia GCP — ale nauka nowej platformy chmurowej przy takim fundamencie to kwestia tygodni, nie miesięcy.`,
 
       // ── NARRACJA ────────────────────────────
-      narrative: `Mieszko ma <strong>3 lata komercyjnego doświadczenia</strong> w budowaniu pipeline'ów ML end-to-end — od zaciągania danych i feature engineeringu po deploy modeli w chmurze. W SmartStock: uprodukcyjniał modele LightGBM i LSTM (notebooki → modularne pipeline'y produkcyjne), integrował zewnętrzne źródła danych przez API, wdrażał systemy na <strong>Azure Functions</strong>. Publicis wymaga kogoś kto samodzielnie prowadzi projekty end-to-end i rozumie cały cykl danych od źródła po model — to naturalne środowisko pracy Mieszka. Komponent MLOps i LLM/RAG w ofercie to kierunek, w którym aktywnie się rozwija.`,
+      narrative: `Przez 3 lata w SmartStock budowałem <strong>pipeline'y danych</strong> od zera do produkcji — zbieranie z API, walidacja, transformacja, deploy na <strong>Azure Functions</strong>. Modele ML nie kończyły się na notebooku: wdrażałem <strong>LightGBM i LSTM</strong> do realnych decyzji logistycznych. Poza etatem zbudowałem dwie aplikacje — Mirror (LLM + FastAPI + Docker) i DocQuery (<strong>RAG pipeline</strong> z testami integracyjnymi i ground truth) — żeby mieć produkcyjny dowód, nie tylko teorię. W Publicis interesuje mnie budowanie infrastruktury danych, która realnie zasila decyzje biznesowe.`,
 
       // ── 4 MATCH POINTY ──────────────────────
       matches: [
         {
-          req:   "Budowa pipeline'ów danych end-to-end",
-          title: "Modularne pipeline'y ML w produkcji",
-          proof: "Uprodukcyjniałem modele globalne LightGBM i LSTM do prognozowania popytu — od notebooka do modularnych <em>pipeline'ów produkcyjnych</em> z osobnymi etapami: ingest, feature engineering, trening, inference. Każdy moduł osobny — testowalny i rozwijany niezależnie."
+          req:   "Python + obsługa API",
+          title: "3 lata Pythona w produkcji, integracje API",
+          proof: "Integracja <em>Open Weather API</em> w SmartStock; backend <em>FastAPI</em> z testami pytest w projekcie Mirror — REST API od zera do CI/CD na GitHub Actions."
         },
         {
-          req:   "Integracja źródeł danych i obsługa API",
-          title: "API zewnętrzne + własne REST API",
-          proof: "W SmartStock: integracja <em>Open Weather API</em> jako feature w modelach prognostycznych — pipeline importu i transformacja do formatu modelu. W projektach własnych: REST API w <em>FastAPI</em> z pełną warstwą danych (PostgreSQL, migracje Alembic)."
+          req:   "Projektowanie pipeline'ów end-to-end",
+          title: "POC → pipeline produkcyjny",
+          proof: "SmartStock: uprodukcyjnienie optymalizatora kosztów logistycznych — od POC do <em>Azure Functions</em> obsługujących tysiące produktów; <em>LightGBM/LSTM</em> z notebooków na modularne pipeline'y."
         },
         {
-          req:   "Deploy i utrzymanie systemów w chmurze",
-          title: "Azure Functions w produkcji",
-          proof: "Uprodukcyjniłem optymalizator kosztów logistycznych — od POC do <em>Azure Functions</em> obsługujących tysiące produktów. Konteneryzacja Docker, debug i monitorowanie systemu produkcyjnego, kontakt z klientem przy uzgadnianiu parametrów."
+          req:   "Zarządzanie cyklem życia modeli ML (nice-to-have)",
+          title: "Modele predykcyjne w produkcji + RAG pipeline",
+          proof: "Modele prognozowania popytu wdrożone produkcyjnie w SmartStock; <em>DocQuery</em> — RAG pipeline z zestawem ewaluacyjnym: 14 pytań single-hop + testy integracyjne z ground truth."
         },
         {
-          req:   "ML lifecycle + MLOps (mile widziane)",
-          title: "Cykl życia modeli — koncepcja i praktyka",
-          proof: "Rozumiem pełny cykl ML: dane → trening → wersjonowanie → deploy. Nie używałem <em>MLflow</em> ani <em>Vertex AI</em> komercyjnie — to uczciwy gap. Nadrabiam przez własne projekty: GitHub Actions CI/CD, testy integracyjne, mierzalne eval sety jako automatyczne kryterium jakości."
+          req:   "Współpraca z analitykami i biznesem",
+          title: "Rola łącznika nauka-biznes",
+          proof: "W SmartStock tłumaczyłem wyniki modeli na decyzje logistyczne; analizy ad hoc i uzgadnianie wymagań z klientami — rozumiem oba języki: techniczny i biznesowy."
         }
       ],
 
       // ── SCORE (85-97) ────────────────────────
-      score:   87,
-      verdict: "Zdecydowanie rekomendowany",
+      score:   85,
+      verdict: "Rekomendowany",
 
       // ── BOTTOM CTA ──────────────────────────
-      cta: "Umów rozmowę z tym kandydatem",
+      cta: "Porozmawiajmy o podejściu end-to-end w środowisku agencyjnym Publicis.",
     },
 
     // ─── ENGLISH ──────────────────────────────
     en: {
-      offerRole:    "Data Engineer",
-      offerCompany: "Publicis Groupe",
-      offerText: `Looking for a Data Engineer with min. 2 years of data engineering or data analysis experience. Required: practical Python skills (API handling, data processing), cloud experience (GCP, Microsoft Fabric), ability to independently manage end-to-end projects. Responsibilities: designing data collection processes, implementing data source connectors, loading and processing data in the cloud, ML model lifecycle management. Nice to have: MLOps, LLM/RAG. Stack: Python, GCP, BigQuery, SQL.`,
+      offerRole:    "[Role name]",
+      offerCompany: "[Company name]",
+      offerText: `[Paste key parts of the job posting — requirements, stack, team description. 5-8 sentences is enough.]`,
 
-      thinkingText: `Data engineering role with a clear ML component — pipelines, cloud, model lifecycle. Interesting combination, checking the candidate.
-Python + data processing — 3 commercial years, check. End-to-end ML pipelines — productionized LightGBM and LSTM models at SmartStock, notebook to production system, check.
-Cloud — Azure Functions production deploy, check. GCP specifically — knows basics, not deployed commercially. Potential gap, but cloud stack transfers quickly when foundations are solid.
-API integration and data sources — Open Weather API at SmartStock, FastAPI in personal projects, check.
-MLOps and model lifecycle — understands the mechanism, hasn't used tools (MLflow, Vertex AI) commercially. Listed as nice-to-have, not required.
-Overall: good fit on core requirements, main gap on GCP and MLOps tooling.`,
+      thinkingText: `[Write Claude-style "thinking": what signals I see in the offer, what in the candidate's profile matches, potential gaps, overall assessment. Stream-of-consciousness style.]`,
 
-      narrative: `Mieszko has <strong>3 years of commercial experience</strong> building ML pipelines end-to-end — from data ingestion and feature engineering to cloud deployment. At SmartStock: productionized LightGBM and LSTM models (notebooks → modular production pipelines), integrated external data sources via API, deployed systems on <strong>Azure Functions</strong>. Publicis needs someone who can independently manage end-to-end data projects — that's his natural working style. The MLOps and LLM/RAG component is the direction he's actively developing toward.`,
+      narrative: `[3-4 sentences: concrete answer to why Mieszko fits this role. Use <strong>tags</strong> for key terms. Direct, no fluff.]`,
 
       matches: [
-        {
-          req:   "End-to-end data pipeline development",
-          title: "Modular ML pipelines in production",
-          proof: "Productionized LightGBM and LSTM demand forecasting models — from notebooks to modular <em>production pipelines</em> with separate stages: ingest, feature engineering, training, inference. Each module independent, testable, developed separately."
-        },
-        {
-          req:   "Data source integration and API handling",
-          title: "External APIs + own REST API",
-          proof: "At SmartStock: integrated <em>Open Weather API</em> as a feature in forecasting models — ingestion pipeline and transformation layer. Personal projects: REST API in <em>FastAPI</em> with full data layer (PostgreSQL, Alembic migrations)."
-        },
-        {
-          req:   "Cloud deployment and system maintenance",
-          title: "Azure Functions in production",
-          proof: "Productionized a logistics cost optimizer — from POC to <em>Azure Functions</em> handling thousands of products. Docker containerization, production system debugging and monitoring, client contact on parameter agreement."
-        },
-        {
-          req:   "ML lifecycle + MLOps (nice to have)",
-          title: "Model lifecycle — concept and practice",
-          proof: "Understand the full ML cycle: data → training → versioning → deploy. No commercial <em>MLflow</em> or <em>Vertex AI</em> experience — honest gap. Bridging through own projects: GitHub Actions CI/CD, integration tests, measurable eval sets as automated quality gates."
-        }
+        { req: "[Requirement #1]", title: "[Your answer]", proof: "[Concrete proof — project, number, tech. Use <em>tags</em> for keywords.]" },
+        { req: "[Requirement #2]", title: "[Your answer]", proof: "[Concrete proof.]" },
+        { req: "[Requirement #3]", title: "[Your answer]", proof: "[Concrete proof.]" },
+        { req: "[Requirement #4]", title: "[Your answer]", proof: "[Concrete proof.]" }
       ],
 
-      score:   87,
+      score:   93,
       verdict: "Strongly recommended",
       cta:     "Schedule an interview with this candidate",
     }
